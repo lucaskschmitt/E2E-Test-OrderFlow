@@ -22,7 +22,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
   it('Deve adicionar o produto ao carrinho e fazer o checkout', () => {
     produtosPage.buscarProduto('Aero Daily Fitness Tee')
-    produtosPage.addProdutoCarrinho('XS', 'Brown', 4)
+    produtosPage.addProdutoCarrinho('XS', 'Yellow', 4)
     cy.get('.woocommerce-message > .button').click()
     cy.get('.checkout-button').click()
     cy.get('#billing_first_name').type(faker.person.firstName())
