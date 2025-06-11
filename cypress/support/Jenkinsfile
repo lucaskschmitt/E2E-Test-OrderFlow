@@ -12,6 +12,11 @@ pipeline {
                bat 'npm install' 
             }
         }
+        stage('Subir servidor') {
+            steps {
+                bat 'npm start'
+            }
+        }
         stage('Test') {
             steps {
                bat 'set NO_COLOR=1 npm run cy:run'
