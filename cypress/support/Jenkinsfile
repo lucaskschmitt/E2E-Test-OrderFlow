@@ -4,14 +4,17 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                git branch: 'main', url: 'https://github.com/luquinhasskdev/E2E-Test-OrderFlow'
-                bat 'npm install'
+                git branch: 'main', url: 'https://github.com/lucaskschmitt/E2E-Test-OrderFlow'
+            }
+        }
+        stage('Instalar Dependências') {
+            steps{
+               bat 'npm install' 
             }
         }
         stage('Test') {
             steps {
-               bat '''set NO_COLOR=1
-npm test'''
+               bat 'set NO_COLOR=1 npm run cy:run'
             }
         }
     }
