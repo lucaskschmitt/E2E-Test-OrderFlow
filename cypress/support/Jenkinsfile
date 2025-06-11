@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Subir servidor') {
             steps {
-                bat 'npm start'
+                bat 'npx serverest'
             }
         }
         stage('Test') {
