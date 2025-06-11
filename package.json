@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": { 
-    "test": "npx cypress run"
+  "scripts": {
+    "test": "npx cypress run",
+    "ci": "start-server-and-test start-server http://localhost:8080 test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
-    "cypress": "^13.6.0"
-
-    
+    "cypress": "^13.6.0",
+    "start-server-and-test": "^2.0.12"
   }
 }
-
