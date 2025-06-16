@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npx serverest",
     "test": "npx cypress run",
     "ci": "start-server-and-test start-server http://localhost:3000 test"
   },
